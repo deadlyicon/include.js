@@ -1,0 +1,20 @@
+!!!
+%html
+  %head
+    %link{:href => "/screen.css", :rel => "stylesheet", :media => "screen"}
+    %script{:src => 'http://ajax.googleapis.com/ajax/libs/jquery/1.6.4/jquery.js', :type => 'text/javascript'}
+    %script{:src => '/include.js', :type => 'text/javascript'}
+
+  %body
+    - csi '/includes/header'
+
+    %section static static static
+
+    - acsi '/includes/a_widget'
+
+    %section static static static static static
+
+    %section#unicorns
+      %button{:onclick => "$(this).parent().loadReplacement('/unicorns');"} load something
+
+    - csi '/includes/footer'
